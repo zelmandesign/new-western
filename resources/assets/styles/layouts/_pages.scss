@@ -1,0 +1,132 @@
+#main {
+  min-height: 200vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .flex-wrapper {
+    max-width: 1200px;
+  }
+
+  @include media-breakpoint-down(md) {
+    min-height: 200vh;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 100vh;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: 10em;
+    text-shadow: 0 4px 20px rgba(40, 43, 65, 0.5);
+    line-height: 1em;
+    letter-spacing: 10px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 5em;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 3em;
+    }
+  }
+
+  p {
+    color: #fff;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-shadow: 0 4px 20px rgba(40, 43, 65, 0.5);
+    line-height: 1em;
+    letter-spacing: 20px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 2em;
+    }
+  }
+}
+
+#menu,
+#catering {
+  background-position: right;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-down(lg) {
+    background-image: none !important;
+  }
+}
+
+#specials,
+#banquet {
+  background-position: left;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-down(lg) {
+    background-image: none !important;
+  }
+}
+
+#testimonials {
+  padding: 100px 0 50px 0;
+  color: #fff;
+
+  h3 {
+    font-size: 2.5rem;
+    color: #fff;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.75rem;
+    }
+  }
+
+  .carousel-indicators,
+  .carousel-control-prev,
+  .carousel-control-next {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .carousel-item {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    background-size: cover !important;
+    background-position: center top !important;
+    min-height: 350px;
+
+    @include media-breakpoint-down(md) {
+      min-height: 500px;
+    }
+
+    .carousel-caption {
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: initial;
+      background: #e9f6f9;
+      border-radius: 1rem;
+      padding: 30px;
+      text-align: left;
+      color: #000;
+      -webkit-box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+      -moz-box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+      box-shadow: 4px 4px 5px 0 rgba(26, 26, 26, 0.25);
+
+      .text {
+        font-family: "Merriweather", serif;
+      }
+    }
+  }
+}
+
+.copy {
+  background: darken($color: #343a3f, $amount: 10);
+}

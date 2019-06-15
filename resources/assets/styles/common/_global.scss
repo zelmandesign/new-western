@@ -1,0 +1,125 @@
+body {
+  font-family: "Lato", sans-serif;
+  font-family: "Gentium Book Basic", serif;
+  color: #222;
+  background-color: #f9fafb;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0;
+
+  a {
+    color: #dc3545;
+
+    &:hover {
+      text-decoration: none;
+      color: darken($color: red, $amount: 10);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Alfa Slab One", cursive;
+    font-weight: 400;
+  }
+
+  section {
+    min-height: 100vh;
+    padding: 50px 0;
+    font-size: 20px;
+    border-top: 1px dashed $grey;
+
+    @include media-breakpoint-down(md) {
+      min-height: 30vh;
+    }
+  }
+
+  .heading {
+    font-size: 10rem;
+    border-bottom: 12px $grey solid;
+    border-top: 12px $grey solid;
+    text-shadow: 0 4px 20px rgba(40, 43, 65, 0.5);
+    padding: 30px 0;
+    margin-bottom: 90px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 6em;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 4em;
+    }
+  }
+
+  .line {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    border: 0;
+    border-top: 3px solid $grey;
+    width: 50px;
+  }
+
+  .btn-lg {
+    border-radius: 0;
+    border: 3px $red solid;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    width: 300px;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    -webkit-transition: 0.75s;
+    -o-transition: 0.75s;
+    transition: 0.75s;
+    box-shadow: 0 4px 6px rgba(13, 14, 15, 0.14);
+    background: #fff;
+  }
+
+  .btn-outline-danger {
+    border: 3px $red solid;
+  }
+
+  .btn-outline-dark {
+    border: 3px $dark solid;
+  }
+
+  .social-media {
+    font-size: 2.5rem;
+  }
+}
+
+.modal {
+  padding: 0 !important;
+
+  .modal-lg {
+    min-width: 100%;
+    margin: 0;
+
+    .modal-content {
+      min-height: 100vh !important;
+      background-color: #f9fafb;
+
+      .modal-body {
+        .menu-description {
+          font-size: 20px !important;
+        }
+
+        .menu-item {
+          font-size: 20px !important;
+        }
+
+        @include media-breakpoint-down(lg) {
+          text-align: center;
+        }
+      }
+
+      .modal-footer {
+        justify-content: center;
+      }
+    }
+  }
+}

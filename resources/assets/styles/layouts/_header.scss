@@ -1,0 +1,129 @@
+.scroll {
+  a {
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 80px;
+    background-color: $dark;
+    z-index: 9;
+    border-radius: 50%;
+    color: #fff;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: 0.1s all;
+    -webkit-transition-delay: 0.1s;
+    -moz-transition: 0.1s all;
+    -moz-transition-delay: 0.1s;
+    -ms-transition: 0.1s all;
+    -ms-transition-delay: 0.1s;
+    -o-transition: 0.1s all;
+    -o-transition-delay: 0.1s;
+    transition: 0.1s all;
+    transition-delay: 0.1s;
+
+    .fa { margin-top: 1.5px; }
+
+    &:hover {
+      -webkit-transition-delay: 0s;
+      -moz-transition-delay: 0s;
+      -ms-transition-delay: 0s;
+      -o-transition-delay: 0s;
+      transition-delay: 0s;
+      background: $red;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}
+
+.banner {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,7db9e8+100&1+0,0+100 */
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(125, 185, 232, 0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(125, 185, 232, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(125, 185, 232, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  font-size: 20px;
+}
+
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  color: #fff;
+  padding: 0.25rem 0;
+  margin: 0 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 0.7em;
+  font-weight: 700;
+
+  &:hover { color: darken(#fff, 10%); }
+
+  &:active { color: darken(#fff, 10%); }
+
+  @extend .nav-link;
+}
+
+.brand {
+  @include media-breakpoint-down(sm) {
+    width: 280px;
+
+    img {
+      width: 80%;
+    }
+  }
+}
+
+.navbar-text {
+  line-height: 0.5em;
+  font-weight: 700;
+}
+
+/* Hover.css */
+
+/* Underline From Left */
+
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.hvr-underline-from-left::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: $red;
+  height: 4px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-left:hover::before,
+.hvr-underline-from-left:focus::before,
+.hvr-underline-from-left:active::before {
+  right: 0;
+}

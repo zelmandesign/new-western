@@ -1,0 +1,77 @@
+.gform_wrapper ul {
+  @extend .list-unstyled;
+}
+
+.gform_wrapper li {
+  @extend .form-group;
+}
+
+.gform_wrapper form {
+  margin-bottom: 0;
+}
+
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+  color: $red;
+}
+
+.ginput_container input,
+.ginput_container select,
+.ginput_container textarea {
+  @extend .form-control;
+
+  background-color: white;
+}
+
+.ginput_container textarea {
+  height: auto;
+}
+
+.gform_button {
+  @extend .btn;
+  @extend .btn-primary;
+
+  padding: 5px 10px !important;
+}
+
+.gform_wrapper .gfield_error {
+  .gfield_label {
+    color: $red;
+  }
+
+  input,
+  select,
+  textarea {
+    border-color: $red;
+    background-color: $dark;
+    color: red;
+  }
+}
+
+.validation_error {
+  @extend .alert;
+  @extend .alert-danger;
+}
+
+#gforms_confirmation_message {
+  @extend .alert;
+  @extend .alert-success;
+}
+
+.gform_confirmation_message {
+  min-height: 200px;
+  text-align: center;
+}
+
+.form-control {
+  border-radius: 0;
+  border: 1px solid $secondary;
+  background: transparent;
+  padding: 15px 20px;
+  width: 100%;
+}
+
+.gform_wrapper .top_label input.medium,
+.gform_wrapper .top_label select.medium {
+  width: 100% !important;
+}
